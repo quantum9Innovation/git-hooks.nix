@@ -184,7 +184,7 @@ in
     ;
   inherit (elmPackages) elm-format elm-review elm-test;
   # TODO: these two should be statically compiled
-  inherit (haskellPackages) fourmolu;
+  inherit (haskellPackages) fourmolu_0_18_0_0;
   inherit (luaPackages) luacheck;
   inherit (nodePackages) eslint markdownlint-cli prettier cspell;
   inherit (ocamlPackages) ocp-indent;
