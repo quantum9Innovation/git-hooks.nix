@@ -184,12 +184,12 @@ in
     ;
   inherit (elmPackages) elm-format elm-review elm-test;
   # TODO: these two should be statically compiled
-  inherit (haskellPackages) fourmolu_0_18_0_0;
   inherit (luaPackages) luacheck;
   inherit (nodePackages) eslint markdownlint-cli prettier cspell;
   inherit (ocamlPackages) ocp-indent;
   inherit (python3Packages) autoflake black flake8 flynt isort mkdocs-linkcheck mypy openapi-spec-validator pre-commit-hooks pylint pyupgrade;
   inherit (php82Packages) php-cs-fixer psalm;
+  fourmolu = haskellPackages.fourmolu_0_18_0_0;
   # FIXME: workaround build failure
   phpstan = php82Packages.phpstan.overrideAttrs (old: {
     composerStrictValidation = false;
